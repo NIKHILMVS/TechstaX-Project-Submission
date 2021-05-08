@@ -9,7 +9,6 @@ from flask import redirect
 from flask import url_for
 from flask import session
 from app.extensions import client
-import time
 
 app=Flask(__name__)
 
