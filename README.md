@@ -43,7 +43,7 @@ http://127.0.0.1:5000/webhook/receiver
 ```
 
 * Note: The project has one limitation:
-The project only displays the actions of "pull_request", I could not figure it out for push and merge,  as I donot have complete understanding of Git.
+The project only displays the actions of "pull_request", I could not figure it out for push and merge as I donot have complete knowledge of Git.
 
 
 *******************
