@@ -38,18 +38,14 @@ def message():
         
         return "SUCCESSFUL"
 
+@webhook.route('/receiver')
+def receiver():
+    cursor = collection.find().sort([('timestamp', -1)]).limit(1)[0]
+    author=cursor["Author"]
+    from_branch=cursor["from_branch"]
+    to_branch=cursor["to_branch"]
+    timestamp=cursor["timestamp"]
 
-while(True):
-    @webhook.route('/receiver')
-    def receiver():
-        cursor = collection.find().sort([('timestamp', -1)]).limit(1)[0]
-        author=cursor["Author"]
-        from_branch=cursor["from_branch"]
-        to_branch=cursor["to_branch"]
-        timestamp=cursor["timestamp"]
-
-        return f"{author} submitted a pull request from {from_branch} to {to_branch} on {timestamp}"
-        
-    time.sleep(15)
+    return f"{author} submitted a pull request from {from_branch} to {to_branch} on {timestamp}"
 
 
