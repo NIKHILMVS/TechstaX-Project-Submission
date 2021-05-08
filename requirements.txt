@@ -3,4 +3,3 @@ Flask-Cors
 Flask-Login
 Flask-PyMongo
 pymongo
-flask-pymongo
